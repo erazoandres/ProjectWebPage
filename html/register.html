@@ -1,0 +1,76 @@
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../css/login.css" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <style> 
+            label{
+                position: relative;
+                display: block;
+                top: -52px;
+            }
+
+            input:focus ~ label{
+                color:rgb(70, 123, 238);     
+            }
+
+            form h1{
+                margin-bottom:25px;
+            }
+
+            .entrada input{
+                padding: 5px;
+            }
+
+            .container{
+                width: 80%;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+      
+        <div class="container">
+            <div class="login">
+                    
+                <form action="../php/register.php" method="post" autocomplete="off">
+                        <div class="logo"><img src="../resources/logo.png" alt="aquilogo" height="80" width="120"></div>
+                        <h1>Registro</h1>
+
+                        
+                        <div class="entrada">
+                            <input type="text" name="input_user">
+                            <label for="input_user">username</label>
+                        </div>
+
+                        <div class="entrada">
+                            <input type="password" name="input_pass">
+                            <label for="">password</label>
+                        </div>
+
+                        <div class="entrada">
+                            <input type="text" name="input_email">
+                            <label for="">email</label>
+                        </div>
+
+                        <div class="entrada">
+                            <input type="date" name="input_date">
+                            <label for="">birth</label>
+                        </div>
+
+                        <input type="submit" value="REGISTARME">                        
+                </form>
+            </div>
+
+        
+            <div class="imagen">
+                <span>Titan's Desings ® 2022</span>
+             </div>
+        
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../css/login.css" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+
+      
+        <div class="container">
+            <div class="login">
+                    
+                <form action="../php/login.php" method="post">
+                        <div class="logo"><img src="../resources/logo.png" alt="aquilogo" height="80" width="120"></div>
+                        <h2>iniciar sesion</h2>
+
+                        <div class="entrada"> 
+                            <input type="text" placeholder=" Escriba su email" name="input_user">
+                            <i class="material-icons">people</i>
+                            <label for="input_user">Usuario</label>
+                        </div>
+
+                        <div class="entrada" id="entrada2">
+                            
+                            <input type="password" placeholder="Escriba su contraseña" name='input_pass' >
+                            <i class="material-icons">password</i>
+                            <label for="input_pass">Contraseña</label>
+                        </div>
+
+                        
+                    <div class="links">
+                        <a href="./register.html">Registrarme</a>
+                        <span>|</span>
+                        <a href="#">¿Olvidaste tu Contraseña?</a>
+                    </div>
+                        <input type="submit" value="ENVIAR">                        
+                </form>
+            </div>
+
+        
+            <div class="imagen">
+                <span>Titan's Desings ® 2022</span>
+             </div>
+        
+        </div>
+        
+    </body>
+</html>

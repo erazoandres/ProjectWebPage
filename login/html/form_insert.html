@@ -1,0 +1,143 @@
+<html>
+    <meta charset="utf-8">
+    <head>
+        <style>
+
+            *{
+                margin: 0;
+                padding: 0;
+                font-family:monospace;
+                box-sizing: border-box;
+            }
+
+            body{
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                height: 100vh;
+                background:cornflowerblue;
+                font-size: 16px;
+            }
+
+            form{
+                 background:crimson;
+                 padding: 10px;
+                 position: relative;
+                 bottom:25%;
+            }
+
+            .info_data{
+                width: 100%;
+                display: flex;
+                text-align: center;
+                justify-content: space-around;
+                text-transform: capitalize;
+                padding: 5px;
+            }
+
+            .info_data label{
+                color:gainsboro;
+                font-size: 18px;
+                transform: translateX(-30px);
+                position: relative;
+                
+            }
+
+            .input_data input[type=submit]{
+        
+                text-transform: uppercase;
+                padding: 5px;
+                font-size: 12px;
+                color:gray;
+                
+            }
+
+            .input_data input[type=submit]:hover{
+                color:#000;
+                box-shadow:1px 1px 2px 1px rgba(0,0,0,0.5);
+            }
+
+            input:focus ~ label{
+                color:red;
+                position: absolute;
+             
+            }
+
+            .input_data label, input{
+                font-size: 14px;
+                font-weight: bold;
+                height: 25px;
+                padding: 5px;
+                color:#000;
+                display: inline-block;
+                outline: none;
+                text-transform: capitalize;
+
+            }
+
+            .input_data input::placeholder{
+                color:gray;
+            }
+
+            /* ESTILO A ETIQUETAS FALLIDO AUN */
+            .input_data input:focus ~ .info_data label{
+                color:red;
+                background-color: red;
+            }
+
+            .home{
+                width: 50px;
+                height: 50px;
+                background: indigo;
+                display: flex;
+                text-align: center; 
+                justify-content: center;       
+                align-items: center;     
+                left:50px;
+                position: fixed;
+                top:20px;
+            }
+
+            .home a{
+                color:white;
+                text-decoration: none;
+            }
+
+            .home a:hover{
+                color:crimson;
+            }
+
+           
+        </style>
+    </head>
+
+    <body>
+
+        <div class="home">
+            <a href="../php/board_users.php">HOME</a>
+        </div>
+
+        <form action="../php/insert.php" method="post">
+
+            <div class="info_data">
+                <label for="nombre">nombre</label>
+                <label for="email">email</label>
+                <label for="password">password</label>
+            </div>
+
+            <div class="input_data">
+            
+                <input name="nombre" type="text" placeholder="ingresa tu nombre">
+
+                <input name="email" type="text" placeholder="ingresa tu email">
+
+                <input name="password" type="password" placeholder="ingresa contraseña">
+
+                <input type="submit" value="AGREGAR">
+            </div>
+            
+       
+        </form>
+    </body>
+
+</html>

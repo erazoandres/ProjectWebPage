@@ -1,0 +1,358 @@
+/* GENERAL */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:'Noto Sans JP', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+
+.nav1{
+  width: 100%;
+  background: #0E1428;
+  position: sticky;  
+  top:0;
+  overflow: hidden;
+  height: 70px;
+}
+
+.logo{
+  color:#fff;
+  font-size:40px;
+  margin-left:30px;
+  line-height: 70px;
+  letter-spacing: .1rem;
+}
+
+ul{
+  float:right;
+  line-height: 70px;
+}
+
+ ul li{
+  display: inline-block;
+  text-transform: capitalize;
+  padding:5px;
+  
+}
+
+ul li:last-child{
+  background:#D95D39;
+}
+
+header .nav1 li a:last-child:hover {
+  color:#637074;
+}
+
+ul li:last-child a{
+  font-weight: 700;
+  background: none;
+  transition: .5s ease;
+}
+
+ul li a{
+  text-decoration: none;
+  color:white;
+  font-size:1rem;
+  padding: 10px;
+  text-transform: uppercase; 
+}
+
+.home, a:hover{
+  background:#D95D39;
+  transition: .7s ease;
+  border-radius: 2px;
+}
+  
+#check{
+  display: none;
+}
+
+#check-btn{
+  color: #fff;
+  font-size: 30px;
+  float:right;
+  display: none;
+  padding: 5px;
+}
+
+.img_nav{
+  /* background:url(https://image.freepik.com/foto-gratis/eleccion-iconos-aplicaciones-moviles_1098-18639.jpg?w=740) no-repeat; */
+  background:url(https://digitalisthub.com/wp-content/uploads/2017/02/disenoweb.jpg);
+  background-position: center;
+  background-size:cover;
+  height: 80vh;
+}
+
+/*  MAIN */
+
+.container{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin:auto;
+  margin-bottom:20px;
+  margin-top:20px;
+}
+
+.container .post{
+  margin-bottom: 50px;
+}
+
+.content .title{
+  font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	padding-top: 40px;
+  text-transform: capitalize;
+  line-height: 25px;
+
+  padding: 10px;
+  margin: 10px;
+}
+
+.content .fecha{
+  font-size: 12px;
+	color: rgba(0,0,0,0.5);
+  padding: 10px;
+  margin-top: -25px;
+}
+  
+.content p{
+
+	line-height: 25px;
+	color: #525151;
+  text-align: justify;
+  padding: 10px;
+  margin: 10px 10px 10px 10px;
+}
+
+aside{
+  max-height: 200px;
+  min-width: 150px;
+  background: #0E1428;
+  position: sticky;
+  top:15;
+  border-radius:3px;
+  padding: 5px;
+  margin-right: 50px;
+}
+
+aside .indice{
+  background: #0E1428;
+  padding: 0 5px;
+  margin: 0 5px;
+  position: relative;
+  width: 100%;
+}
+
+aside .title{
+
+  padding: 10px;
+  margin:10px;
+  margin-bottom:0;
+  color:#fff;
+  font-weight: bold;
+  font-size:20px;
+
+}
+
+/* //sdsd */
+
+aside .indice a{
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+  font-size:16px;
+  color:rgb(243, 164, 45);
+  line-height: 8px;  
+}
+
+aside nav a:hover{
+  text-decoration: underline;
+  background:none;
+}
+
+/* TARGETS */
+.container_targets{
+  width: 100%;
+  display: flex;  
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+
+.container_targets h1{
+  text-transform: uppercase;
+  font-size: 28px;
+  color:#0E1428;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.container_targets h3{
+  font-size: 11px;
+  color:#24315a;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  margin-bottom: 23px;
+}
+
+.target{
+  padding:10px;
+  transition: .2s ease;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+  border-radius: 2%;
+  width: 300px;
+  margin: 40px 0;
+}
+
+.target .img{
+  height: 250px;
+  background-size: cover;
+  background-position:center;
+  border-radius: 2%;
+}
+
+.target:nth-last-child(1) .img{
+  background:url(https://img.freepik.com/foto-gratis/desarrollo-sitios-web_53876-95315.jpg?w=740);
+}
+
+.target:nth-last-child(2) .img{
+  background-image:url(https://cetrexmarketing.com/wp-content/uploads/2019/04/cetrex-marketing-que-es-marketing-digital-500x300.jpg);
+
+}
+
+.target:nth-last-child(3) .img{
+  background-image:url(https://www.posicionamiento-webs.com/wp-content/uploads/2018/06/Elementos-que-marcan-la-ruta-del-marketing-digital-exitoso-500x300.jpg);
+}
+
+.target div p{
+  text-align: justify;
+  padding: 10px;
+  margin-top:15px;
+  font-size: .9rem;
+}
+
+.target:hover{
+  transform: translateY(-6%);
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.6);
+}
+
+/* FOOTER */
+
+footer img{
+  width: 100%;
+  height: 70vh;
+}
+
+footer .nav1{
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+footer ul li:last-child , footer .home{
+  background: none;
+}
+
+footer ul li a:hover:last-child{
+  color: #fff;
+}
+
+label span{
+  font-size: 20px;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width:780px){
+  .logo{  
+    font-size:35px;
+    color:#fff;
+  }
+
+  #check-btn{
+    display: block;
+    color:#fff;
+    margin: 20px;
+  }
+
+  nav{
+    background:#fff;
+  }
+
+  ul{
+    position:fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    text-align: center;
+    left:-100%;
+    transition: all .5s ease;
+
+  }
+
+  ul li{
+    display: block;
+    margin:30px;
+    line-height: 80px; 
+  }
+
+    ul li a{
+    letter-spacing: .1rem;
+    font-family:monospace;
+    font-weight: bold;
+    font-size:20px;
+  }
+
+  a.home , a:hover{
+    background: none;
+    color:rgb(62, 80, 243)
+  }
+
+  #check:checked ~ ul{
+    left: 0;
+  }  
+
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  aside{
+    background: #000;
+    position: static;
+  }
+
+  aside .indice{
+    background: #000;
+    width: 110px;
+  }
+
+  aside .title{
+    text-align: center;
+  }
+
+  .imagen_footer{
+    display: none;
+  }
+
+  .img_nav{
+    height: 30vh;
+  }
+
+}
