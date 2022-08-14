@@ -1,11 +1,13 @@
+
 <?php
+
     include_once '../php/create_conection.php';
-    
+
     Conection::create_conection();
     $nuevaConexion = Conection::get_conection();
     $sentencia = $nuevaConexion->prepare("SELECT * FROM usuarios");
     $sentencia->execute();
-    $resultado = $sentencia->fetchAll()
+    $resultado = $sentencia->fetchAll();
 
 ?>
 
@@ -14,21 +16,40 @@
         
     <style>
 
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+
         
         body{
-            height:100vh;
-            width: 100%;
-            display:flex;
-            justify-content:center;
-            position:relative;
-            top:50px;
             background:cornflowerblue;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+        }
+
+        header{
+            width:100%;
+            height:50px;
+            background-color:tomato;
+        }
+
+        .name_user{
+            font-size:22px;
+            text-transform:capitalize;
+            position: relative;
+            left:20px;
+            top:10px;
         }
 
         table{
             display:flex;
+            justify-content:center;
             font-family:consolas;
             min-width:300px;
+            margin-top:20px;
         }
 
         table tr{
@@ -85,7 +106,7 @@
             align-items: center;     
             left:50px;
             position: fixed;
-            top:20px;
+            top:80px;
         }
 
         .exit a{
@@ -97,12 +118,14 @@
             color:crimson;
         }
 
-
     </style>
     
 
     </head>
     <body>
+
+        <header> <p> <span class="name_user"> Bienvenid@ <?php echo $_SESSION["userName"] ?></span></p> </header>    
+    
         <table>
             <tr>
                 <td>[id]</td>
@@ -126,7 +149,6 @@
                 }
             ?>
         </table>
-
         
         <div class="tools">
             <div class="insertar"><a href="../html/form_insert.html">INS</a></div>
@@ -138,5 +160,6 @@
         <div class="exit">
             <a href="../html/index.html">EXIT</a>
         </div>
+
     </body>
 </html>

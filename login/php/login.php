@@ -1,21 +1,35 @@
 <?php
 
-    include_once 'create_conection.php';
+    // Pendiente Encapsular en una clase (Objetos)
+    session_start();
     
+    include_once 'create_conection.php';
     
     Conection::create_conection();
     $nuevaConexion = Conection::get_conection();
-    $user_name = $_POST["nombre"];
-    $user_pass = $_POST["pass"];
-    $sentencia = $nuevaConexion->prepare("SELECT * FROM usuarios WHERE nombre ='$user_name' And password = '$user_pass'" );
-    $sentencia->execute();
-    $resultado = $sentencia->fetchAll();
 
-    if(count($resultado)> 0){  
-        include_once 'board_users.php';
+    // Pendiente verificar diferencia con  try and catch ademas de la captura del error.
+    if(isset($nuevaConexion)){
+
+       
+
+        $user_name = $_POST["nombre"];
+        $user_pass = $_POST["pass"];
+        $sentencia = $nuevaConexion->prepare("SELECT * FROM usuarios WHERE nombre ='$user_name' And password = '$user_pass'" );
+        $sentencia->execute();
+        $resultado = $sentencia->fetchAll();
+
+        $_SESSION["userName"] = $user_name;
+
+        if(count($resultado)> 0){  
+            include_once 'board_users.php';
+        }else{
+            echo 'credenciales incorrectas';
+            die();
+        }
     }else{
-        echo 'credenciales incorrectas';
-        die();
+        echo 'No hay conexion con la base de datos - sesion no iniciada' ;
     }
 
+    
 ?>

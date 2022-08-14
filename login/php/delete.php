@@ -4,6 +4,7 @@
 
     Conection::create_conection();
     $con = Conection::get_conection();
+    
     $a = $_POST['item']; 
     $attr = $_POST['multi'];
 

@@ -9,7 +9,6 @@
                     self::$conexion = new PDO('mysql:host=localhost;dbname=bd','root','');
                     self::$conexion -> setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
                     self::$conexion -> exec('SET CHARACTER SET utf8');
-                    //print "Conected";
                     
                 }catch(PDOException $ex){
                     print $ex->getMessage();

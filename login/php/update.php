@@ -13,7 +13,6 @@
     
     try{
         
-        // FALTA ACTUALIZAR PARA OTROS ARGUMENTOS QUE NO SEAN LA KEY DE LOS REGISTROS 
         $sql = "UPDATE usuarios SET $attr = '$data2'  WHERE $keyUser = '$data' ";
         $sentencia = $con->prepare($sql);
         $sentencia->execute();
