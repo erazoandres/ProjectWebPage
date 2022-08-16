@@ -2,7 +2,7 @@
    
     include_once 'create_conection.php';
 
-    Conection::create_conection();
+    $con = new Conection();
     $con = Conection::get_conection();
 
     $a = $_POST['nombre'];
