@@ -1,10 +1,11 @@
 
 <?php
+    include_once 'create_conection.php';
+    session_start();
 
-    include_once '../php/create_conection.php';
-
-    Conection::create_conection();
+    $nuevaConexion = new Conection();
     $nuevaConexion = Conection::get_conection();
+
     $sentencia = $nuevaConexion->prepare("SELECT * FROM usuarios");
     $sentencia->execute();
     $resultado = $sentencia->fetchAll();
@@ -120,7 +121,6 @@
 
     </style>
     
-
     </head>
     <body>
 
@@ -158,7 +158,9 @@
         </div>
 
         <div class="exit">
+
             <a href="../html/index.html">EXIT</a>
+            <!--como puedo destruir la session aqui?-->
         </div>
 
     </body>

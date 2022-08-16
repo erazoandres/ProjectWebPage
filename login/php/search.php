@@ -3,7 +3,7 @@
    
     include_once 'create_conection.php';
 
-    Conection::create_conection();
+    $con = new Conection();
     $con = Conection::get_conection();
 
     $a = $_POST['item']; 
@@ -95,6 +95,7 @@
 
         <table>
                 <tr>
+                    
                     <td>[id]</td>
                     <td>[nombre]</td>
                     <td>[email]</td>

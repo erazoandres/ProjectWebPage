@@ -1,17 +1,15 @@
 <?php
-
     // Pendiente Encapsular en una clase (Objetos)
+
     session_start();
-    
     include_once 'create_conection.php';
-    
-    Conection::create_conection();
+
+    $nuevaConexion = new Conection();
     $nuevaConexion = Conection::get_conection();
+    
 
     // Pendiente verificar diferencia con  try and catch ademas de la captura del error.
     if(isset($nuevaConexion)){
-
-       
 
         $user_name = $_POST["nombre"];
         $user_pass = $_POST["pass"];
@@ -22,7 +20,7 @@
         $_SESSION["userName"] = $user_name;
 
         if(count($resultado)> 0){  
-            include_once 'board_users.php';
+            header('Location:board_users.php');
         }else{
             echo 'credenciales incorrectas';
             die();

@@ -2,10 +2,10 @@
     class Conection{
         private static $conexion;
 
-        public static function create_conection(){
+        public function __construct(){
             if(!isset(self::$conexion)){
                 try{
-
+                    
                     self::$conexion = new PDO('mysql:host=localhost;dbname=bd','root','');
                     self::$conexion -> setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
                     self::$conexion -> exec('SET CHARACTER SET utf8');
